@@ -1,7 +1,5 @@
 ﻿<!doctype html>
 <html lang="en">
-@{
-}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,14 +13,8 @@
     @RenderSection("head", required: false)
 </head>
 <body>
-    <header class="site-header @(ViewBag.HasImage == null || !ViewBag.HasImage ? "site-header-dark" : "")">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <partial name="Partial/_Menu.cshtml" />
-                </div>
-            </div>
-        </div>
+    <header class="site-header">
+        <partial name="Partial/_Menu.cshtml" />
     </header>
     @RenderBody()
     <script src="~/public/vendors.js"></script>
