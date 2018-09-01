@@ -2,7 +2,7 @@
 Swedish web site for LS Cargo Logistics.
 
 ## Getting started with frontend
-From LSCargo.Web folder run the following commands:
+Run the following commands from the LSCargo.Web folder:
 ```
 npm install
 npm run dev
