@@ -1,3 +1,4 @@
-﻿@import "~modularized-normalize-scss/normalize";
-@import "settings";
+﻿@import "settings";
 @import "~bootstrap/scss/bootstrap";
+@import "components/grid/row";
+@import "components/grid/col";

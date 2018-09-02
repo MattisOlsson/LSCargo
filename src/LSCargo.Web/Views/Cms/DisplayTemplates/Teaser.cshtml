@@ -1,0 +1,19 @@
+﻿@model LSCargo.Web.Models.Regions.Teaser
+
+<div class="card">
+    <article class="card-body">
+        <h2 class="card-title">@Model.Title</h2>
+        <h3 class="card-subtitle mb-2 text-muted">@Model.SubTitle</h3>
+        <p class="card-text">
+            @Html.Raw(Model.Body)
+        </p>
+        @if (Model.PageLink.HasValue)
+        {
+            <a href="@Model.PageLink.Page.Permalink" class="btn btn-primary">Read more..</a>
+        }
+        else if (Model.PostLink.HasValue)
+        {
+            <a href="@Model.PostLink.Post.Permalink" class="btn btn-primary">Read more..</a>
+        }
+    </article>
+</div>

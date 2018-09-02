@@ -1,0 +1,5 @@
+﻿.col + .col {
+    @include media-breakpoint-down("sm") {
+        margin-top: $grid-gutter-width * 0.5;
+    }
+}

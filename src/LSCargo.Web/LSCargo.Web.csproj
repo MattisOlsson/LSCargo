@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="frontend\shared\" />
     <Folder Include="wwwroot\public\" />
   </ItemGroup>
 

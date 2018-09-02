@@ -2,6 +2,7 @@ using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSCargo.Web.Models
 {
@@ -19,6 +20,7 @@ namespace LSCargo.Web.Models
         /// Gets/sets the available teasers.
         /// </summary>
         [Region(ListTitle = "Title")]
+        [UIHint("Teasers")]
         public IList<Regions.Teaser> Teasers { get; set; }
 
         /// <summary>

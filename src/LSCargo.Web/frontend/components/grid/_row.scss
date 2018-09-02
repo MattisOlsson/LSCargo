@@ -1,0 +1,7 @@
+﻿.row + .row {
+    margin-top: $grid-gutter-width * 0.5;
+
+    @include media-breakpoint-up("sm") {
+        margin-top: 2rem;
+    }
+}
