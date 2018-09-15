@@ -250,3 +250,4 @@ paket-files/
 *.sln.iml
 
 **/wwwroot/uploads/
+src/**/piranha.db
