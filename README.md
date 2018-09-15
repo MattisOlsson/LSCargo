@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-## Run site
+### Run site
 Run the following command from the LSCargo.Web folder (requires .NET Core 2):
 ```
 dotnet run
