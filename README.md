@@ -1,7 +1,11 @@
 # LSCargo
 Swedish web site for LS Cargo Logistics.
 
-## Getting started with frontend
+## Getting started
+* Clone repository and copy piranha.db from backup folder to src/LSCargo.Web folder
+* Copy uploads from backup folder to src/LSCargo.Web/wwwroot
+
+### Build frontend
 Run the following commands from the LSCargo.Web folder:
 ```
 npm install
