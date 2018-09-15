@@ -1,0 +1,21 @@
+﻿.jumbotron {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up("lg") {
+        min-height: 50vh;
+        display: flex;
+
+        .container {
+            display: flex;
+            flex: 0 0 100%;
+        }
+
+        .row {
+            display: flex;
+            flex: 0 0 100%;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+    }
+}

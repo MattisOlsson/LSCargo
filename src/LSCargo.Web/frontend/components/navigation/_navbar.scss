@@ -1,0 +1,13 @@
+﻿.navbar {
+    &-brand {
+        margin-right: $navbar-brand-padding-x;
+    }
+
+    &-logo {
+        height: 32px;
+
+        @include media-breakpoint-up("md") {
+            height: 64px;
+        }
+    }
+}

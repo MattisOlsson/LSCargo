@@ -1,2 +1,15 @@
-﻿// Navbar
-$navbar-nav-link-padding-x: .75rem;
+﻿// Colors
+$primary: #015697;
+$secondary: #029642;
+
+// Links
+$link-color: lighten($primary, 15%);
+
+// Navbar
+$navbar-nav-link-padding-x: 1rem;
+$nav-link-padding-y: 0.5rem;
+$navbar-brand-padding-x: 2rem;
+
+// Site footer
+$footer__background-color: #142430;
+$footer__color: #fff;

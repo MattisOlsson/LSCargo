@@ -1,0 +1,9 @@
+.btn-primary {
+    background-color: $link-color;
+    border-color: $link-color;
+
+    &:hover {
+        background-color: darken($link-color, 15%);
+        border-color: darken($link-color, 15%);
+    }
+}

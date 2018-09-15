@@ -64,13 +64,20 @@ module.exports = {
             jQuery: 'jquery',
         }),
         new StyleLintPlugin({
-            files: 'assets/**/*.s?(a|c)ss',
+            files: 'frontend/**/*.s?(a|c)ss',
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
     ],
     optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true, // set to true if you want JS source maps
+            }),
+        ],
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -80,12 +87,5 @@ module.exports = {
                 }
             }
         },
-        minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true, // set to true if you want JS source maps
-            }),
-        ],
     },
 };
