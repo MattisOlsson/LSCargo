@@ -249,5 +249,6 @@ paket-files/
 .idea/
 *.sln.iml
 
+**/public/
 **/wwwroot/uploads/
 src/**/piranha.db
