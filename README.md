@@ -6,8 +6,7 @@ Swedish web site for LS Cargo Logistics.
 * Copy uploads from backup folder to src/LSCargo.Web/wwwroot
 
 ### Build frontend
-Run the following commands from the LSCargo.Web folder:
-Requires [node/npm](https://nodejs.org)
+Requires [node/npm](https://nodejs.org). Run the following commands from the LSCargo.Web folder:
 ```
 npm install
 npm run dev
