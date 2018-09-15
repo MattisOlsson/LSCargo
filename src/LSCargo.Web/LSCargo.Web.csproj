@@ -4,6 +4,9 @@
     <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>    
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="piranha.db" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="frontend\shared\" />
