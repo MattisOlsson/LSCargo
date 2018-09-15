@@ -17,3 +17,4 @@ Compile the project and run the following command from the LSCargo.Web folder (r
 ```
 dotnet run
 ```
+Browse [http://localhost:63662](http://localhost:63662)
