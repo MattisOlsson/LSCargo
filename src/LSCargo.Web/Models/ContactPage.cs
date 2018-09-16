@@ -17,11 +17,11 @@ namespace LSCargo.Web.Models
         public Heading Heading { get; set; }
 
         [Region(ListTitle= "Name")]
-        public IList<Speaker> Speakers { get; set; }
+        public IList<ContactCard> ContactCards { get; set; }
         
         public ContactPage()
         {
-            Speakers = new List<Speaker>();
+            ContactCards = new List<ContactCard>();
 
         }
     }

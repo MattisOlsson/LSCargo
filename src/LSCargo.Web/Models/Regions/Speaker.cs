@@ -11,8 +11,10 @@ namespace LSCargo.Web.Models.Regions
         [Field(Title="Namn")]
         public StringField Name { get; set; }
 
-        [Field(Title="Information")]
-        public HtmlField Content { get; set; }
+        [Field(Title = "E-Post")]
+        public StringField Email { get; set; }
 
+        [Field(Title= "Telefon")]
+        public StringField Phone { get; set; }
     }
 }

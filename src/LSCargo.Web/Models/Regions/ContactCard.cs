@@ -17,5 +17,8 @@ namespace LSCargo.Web.Models.Regions
 
         [Field]
         public StringField Phone { get; set; }
+
+        [Field]
+        public HtmlField Content { get; set; }
     }
 }
