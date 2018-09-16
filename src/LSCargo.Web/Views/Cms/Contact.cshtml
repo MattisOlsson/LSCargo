@@ -37,7 +37,7 @@
                 @foreach (var contactCard in Model.ContactCards)
                 {
                     <li class="contact-list__item col-md-4">
-                        <partial name="~/Views/Cms/DisplayTemplates/ContactCard.cshtml" model="@contactCard" />
+                        @Html.DisplayFor(m => m.ContactCards)
                     </li>
                 }
             </ul>
