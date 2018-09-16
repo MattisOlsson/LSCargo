@@ -1,0 +1,40 @@
+﻿@model LSCargo.Web.Models.ContactPage
+@inject Piranha.IApi Api
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.HasImage = Model.Heading.PrimaryImage.HasValue;
+
+    string PrimaryImage()
+    {
+        if (Model.Heading.PrimaryImage.HasValue)
+        {
+            return $"style=background-image:url({Url.Content(Model.Heading.PrimaryImage)})";
+        }
+        return "";
+    }
+}
+
+<section class="jumbotron jumbotron-fluid" @PrimaryImage()>
+    <div class="container">
+        <div class="row">
+            <div class="text-light col-sm-9">
+                <h1 class="display-4">@Model.Title</h1>
+                <p class="lead">
+                    @Html.Raw(Model.Heading.Ingress)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="main">
+    <div class="container">
+        <div class="row">
+
+            @Html.DisplayFor(m => m.Speakers)
+        
+        </div>
+    </div>
+</div>
+
+

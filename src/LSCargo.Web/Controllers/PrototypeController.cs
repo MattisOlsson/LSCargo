@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using LSCargo.Web.Models.Regions;
-using LSCargo.Web.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Piranha;
 using Piranha.Data;
@@ -19,6 +18,7 @@ namespace LSCargo.Web.Controllers
             _api = api;
         }
 
+    
         [Route("prototype/contact")]
         public IActionResult Contact()
         {

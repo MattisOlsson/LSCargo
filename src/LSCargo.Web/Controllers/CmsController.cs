@@ -72,5 +72,13 @@ namespace LSCargo.Web.Controllers
 
             return View(model);
         }
+
+        [Route("contact")]
+        public IActionResult Contact(Guid id)
+        {
+            var model = api.Pages.GetById<Models.ContactPage>(id);
+
+            return View(model);
+        }
     }
 }
