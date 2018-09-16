@@ -1,7 +1,7 @@
 ﻿@model LSCargo.Web.Models.Regions.ContactCard
 <div class="contact-card">
     <figure class="contact-card__image">
-        <img src="~/assets/prototype/profile__male.jpg"> @* TODO: REPLACE WITH REAL IMAGE *@
+        <img src="@Url.Content(Model.Image)">
     </figure>
     <h3 class="contact-card__name">@Model.Name</h3>
     <dl class="contact-card__details">
@@ -19,7 +19,7 @@
         
         <dd>
             @Html.Raw(Model.Content)        
+        
         </dd>
-
     </dl>
 </div>
