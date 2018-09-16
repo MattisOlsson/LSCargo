@@ -11,46 +11,47 @@
     }
 }
 
-<header class="jumbotron jumbotron-fluid" @PrimaryImage()>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9 text-light">
-                @if (Model.Archive.Category == null) {
-                    <h1 class="display-4">@Model.Title</h1>
-                } else {
-                    <h1>@Model.Archive.Category.Title</h1>
-                }
-                <p class="lead">
-                    @Html.Raw(Model.Heading.Ingress)
-                </p>
+@section jumbotron
+{
+    <section class="jumbotron jumbotron-fluid" @PrimaryImage()>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 text-light">
+                    @if (Model.Archive.Category == null) {
+                        <h1 class="display-4">@Model.Title</h1>
+                    } else {
+                        <h1>@Model.Archive.Category.Title</h1>
+                    }
+                    <p class="lead">
+                        @Html.Raw(Model.Heading.Ingress)
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </section>
+}
 
-<div class="main">
-    <div class="container">
-        @foreach (var post in Model.Archive.Posts) {
-            <div class="row archive-item">
-                <div class="col-sm-12">
-                    <h2><a href="@post.Permalink">@post.Title</a></h2>
-                    <p>
-                        <strong>@post.Published.Value.ToString("yyyy-MM-dd")</strong> in 
-                        <a href="@Model.Permalink/category/@post.Category.Slug">@post.Category.Title</a>
-                    </p>
-                </div>
-                <div class="col-sm-9">
-                    <p>
-                        @post.Regions.Heading.Ingress.Value 
-                    </p>
-                    <p><a href="@post.Permalink">Read more...</a></p>
-                </div>
-                <div class="col-sm-3 d-xs-none d-md-block">
-                    @foreach (var tag in post.Tags) {
-                        <span class="tag"># @tag.Title</span>
-                    }
-                </div>
+<div class="container">
+    @foreach (var post in Model.Archive.Posts) {
+        <div class="row archive-item">
+            <div class="col-sm-12">
+                <h2><a href="@post.Permalink">@post.Title</a></h2>
+                <p>
+                    <strong>@post.Published.Value.ToString("yyyy-MM-dd")</strong> in 
+                    <a href="@Model.Permalink/category/@post.Category.Slug">@post.Category.Title</a>
+                </p>
             </div>
-        }
-    </div>
+            <div class="col-sm-9">
+                <p>
+                    @post.Regions.Heading.Ingress.Value 
+                </p>
+                <p><a href="@post.Permalink">Read more...</a></p>
+            </div>
+            <div class="col-sm-3 d-xs-none d-md-block">
+                @foreach (var tag in post.Tags) {
+                    <span class="tag"># @tag.Title</span>
+                }
+            </div>
+        </div>
+    }
 </div>

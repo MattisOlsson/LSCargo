@@ -1,8 +1,15 @@
 ﻿@import "settings";
 @import "~bootstrap/scss/bootstrap";
+@import "fontawesome/fa-regular";
+@import "fontawesome/fa-light";
+@import "fontawesome/fa-brands";
+@import "fontawesome/fa-solid";
+@import "fontawesome/fontawesome";
 @import "components/grid/row";
 @import "components/grid/col";
 @import "components/navigation/navbar";
 @import "components/jumbotron/jumbotron";
 @import "components/footer/footer";
 @import "components/button/button";
+@import "components/contact/contact-list";
+@import "components/contact/contact-card";
