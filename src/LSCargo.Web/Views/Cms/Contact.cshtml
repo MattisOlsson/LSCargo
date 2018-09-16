@@ -14,25 +14,33 @@
     }
 }
 
-<section class="jumbotron jumbotron-fluid" @PrimaryImage()>
-    <div class="container">
-        <div class="row">
-            <div class="text-light col-sm-9">
-                <h1 class="display-4">@Model.Title</h1>
-                <p class="lead">
-                    @Html.Raw(Model.Heading.Ingress)
-                </p>
+@section jumbotron 
+{
+    <section class="jumbotron jumbotron-fluid" @PrimaryImage()>
+        <div class="container">
+            <div class="row">
+                <div class="text-light col-sm-9">
+                    <h1 class="display-4">@Model.Title</h1>
+                    <p class="lead">
+                        @Html.Raw(Model.Heading.Ingress)
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+}
 
-<div class="main">
-    <div class="container">
-        @Html.DisplayFor(m => m.Blocks)
-
-        <div class="row">
-            @Html.DisplayFor(m => m.ContactCards)
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <ul class="contact-list row justify-content-center">
+                @foreach (var contactCard in Model.ContactCards)
+                {
+                    <li class="contact-list__item col-md-4">
+                        <partial name="~/Views/Cms/DisplayTemplates/ContactCard.cshtml" model="@contactCard" />
+                    </li>
+                }
+            </ul>
         </div>
     </div>
 </div>
