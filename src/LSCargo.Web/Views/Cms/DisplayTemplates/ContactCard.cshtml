@@ -5,21 +5,29 @@
     </figure>
     <h3 class="contact-card__name">@Model.Name</h3>
     <dl class="contact-card__details">
-        <dt>E-post</dt>
-        <dd>
-            <i class="fal fa-envelope fa-fw"></i>
-            <a href="mailto:@Model.Email">@Model.Email</a>
-        </dd>
+        @if (!string.IsNullOrWhiteSpace(Model.Email?.Value))
+        {
+            <dt>E-post</dt>
+            <dd>
+                <i class="fal fa-envelope fa-fw"></i>
+                <a href="mailto:@Html.Raw(Model.Email)">@Model.Email</a>
+            </dd>
+        }
 
-        <dt>Telefon</dt>
-        <dd>
-            <i class="fal fa-mobile fa-fw"></i>
-            <a href="tel:@Model.Phone">@Model.Phone</a>
-        </dd>
-        
-        <dd>
-            @Html.Raw(Model.Content)        
-        
-        </dd>
+        @if (!string.IsNullOrWhiteSpace(Model.Phone?.Value))
+        {
+            <dt>Telefon</dt>
+            <dd>
+                <i class="fal fa-mobile fa-fw"></i>
+                <a href="tel:@Model.Phone.Value">@Model.Phone</a>
+            </dd>
+        }
     </dl>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Content?.Value))
+    {
+        <div class="contact-card__text">
+            @Html.Raw(Model.Content)
+        </div>
+    }
 </div>

@@ -16,14 +16,17 @@
 
 @section jumbotron 
 {
-    <section class="jumbotron jumbotron-fluid" @PrimaryImage()>
+    <section class="jumbotron jumbotron-fluid jumbotron--narrow" @PrimaryImage()>
         <div class="container">
             <div class="row">
                 <div class="text-light col-sm-9">
                     <h1 class="display-4">@Model.Title</h1>
-                    <p class="lead">
-                        @Html.Raw(Model.Heading.Ingress)
-                    </p>
+                    @if (!string.IsNullOrWhiteSpace(Model.Heading.Ingress?.Value))
+                    {
+                        <p class="lead">
+                            @Html.Raw(Model.Heading.Ingress)
+                        </p>
+                    }
                 </div>
             </div>
         </div>
