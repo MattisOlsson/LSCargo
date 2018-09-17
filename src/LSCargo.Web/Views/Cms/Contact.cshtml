@@ -1,4 +1,4 @@
-@model LSCargo.Web.Models.StartPage
+﻿@model LSCargo.Web.Models.ContactPage
 @inject Piranha.IApi Api
 @{
     ViewBag.Title = Model.Title;
@@ -14,9 +14,9 @@
     }
 }
 
-@section jumbotron
+@section jumbotron 
 {
-    <section class="jumbotron jumbotron-fluid jumbotron--min-height" @PrimaryImage()>
+    <section class="jumbotron jumbotron-fluid" @PrimaryImage()>
         <div class="container">
             <div class="row">
                 <div class="text-light col-sm-9">
@@ -31,6 +31,16 @@
 }
 
 <div class="container">
-    @Html.DisplayFor(m => m.Blocks)
-    @Html.DisplayFor(m => m.Teasers)
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <ul class="contact-list row justify-content-center">
+                @foreach (var contactCard in Model.ContactCards)
+                {
+                    <li class="contact-list__item col-md-4">
+                        @Html.DisplayFor(m => contactCard)
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
 </div>

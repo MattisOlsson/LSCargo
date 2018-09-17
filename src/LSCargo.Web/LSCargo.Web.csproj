@@ -24,7 +24,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />    
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />    
     <PackageReference Include="Piranha" Version="5.1.0" />
     <PackageReference Include="Piranha.AspNetCore" Version="5.1.0" />
     <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="5.1.0" />

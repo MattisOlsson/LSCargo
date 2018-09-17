@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Kontakta oss";
+}
+
+@section jumbotron
+{
+    <section class="jumbotron jumbotron-fluid jumbotron--narrow">
+        <div class="container">
+            <div class="row">
+                <div class="text-light col-sm-9">
+                    <h1 class="display-4">Kontakta oss</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <ul class="contact-list row justify-content-center">
+                @foreach (var contactCard in Model)
+                {
+                    <li class="contact-list__item col-md-4">
+                        <partial name="~/Views/Cms/DisplayTemplates/ContactCard.cshtml" model="@contactCard"/>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

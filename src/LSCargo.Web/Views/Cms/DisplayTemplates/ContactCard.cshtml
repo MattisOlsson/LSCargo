@@ -1,0 +1,25 @@
+﻿@model LSCargo.Web.Models.Regions.ContactCard
+<div class="contact-card">
+    <figure class="contact-card__image">
+        <img src="@Url.Content(Model.Image)">
+    </figure>
+    <h3 class="contact-card__name">@Model.Name</h3>
+    <dl class="contact-card__details">
+        <dt>E-post</dt>
+        <dd>
+            <i class="fal fa-envelope fa-fw"></i>
+            <a href="mailto:@Model.Email">@Model.Email</a>
+        </dd>
+
+        <dt>Telefon</dt>
+        <dd>
+            <i class="fal fa-mobile fa-fw"></i>
+            <a href="tel:@Model.Phone">@Model.Phone</a>
+        </dd>
+        
+        <dd>
+            @Html.Raw(Model.Content)        
+        
+        </dd>
+    </dl>
+</div>

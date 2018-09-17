@@ -16,7 +16,10 @@
     <header class="site-header">
         <partial name="Partial/_Menu.cshtml" />
     </header>
-    @RenderBody()
+    @RenderSection("jumbotron", required: false)
+    <main class="main">
+        @RenderBody()
+    </main>
     <footer class="site-footer">
         <partial name="Partial/_Footer.cshtml" />
     </footer>

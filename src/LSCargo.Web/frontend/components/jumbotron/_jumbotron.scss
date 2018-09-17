@@ -1,10 +1,18 @@
 ﻿.jumbotron {
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #bbc600;
 
     @include media-breakpoint-up("lg") {
-        min-height: 50vh;
         display: flex;
+
+        &--min-height {
+            min-height: 50vh;
+        }
+
+        &--narrow {
+            padding: 2rem;
+        }
 
         .container {
             display: flex;
