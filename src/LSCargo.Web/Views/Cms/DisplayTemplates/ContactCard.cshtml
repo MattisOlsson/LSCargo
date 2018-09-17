@@ -1,7 +1,8 @@
 ﻿@model LSCargo.Web.Models.Regions.ContactCard
+@inject Piranha.IApi Api
 <div class="contact-card">
     <figure class="contact-card__image">
-        <img src="@Url.Content(Model.Image)">
+        <img src="@Url.Content(Model.Image.Resize(Api, 480, 480))">
     </figure>
     <h3 class="contact-card__name">@Model.Name</h3>
     <dl class="contact-card__details">
